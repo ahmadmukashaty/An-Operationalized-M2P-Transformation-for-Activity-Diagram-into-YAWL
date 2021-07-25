@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_4w4MsF6cEeuFDrF0a_XgfQ" name="ActivityDiagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_46ATgF6cEeuFDrF0a_XgfQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_40L_YF6cEeuFDrF0a_XgfQ" name="Product Management" visibility="public" node="_ToQrgHCIEeulIOLqyr1tMw _xiBi0HCDEeulIOLqyr1tMw _Su8RMF6dEeuFDrF0a_XgfQ _NA-jkHCKEeulIOLqyr1tMw _OaIH0HCKEeulIOLqyr1tMw _e23AAHCKEeulIOLqyr1tMw _qCVZ8HCKEeulIOLqyr1tMw _SyStAJVMEeuwnP5WZnR-yw _WO590JVMEeuwnP5WZnR-yw _b9lX4JVMEeuwnP5WZnR-yw">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WLkD0HCKEeulIOLqyr1tMw" target="_OaIH0HCKEeulIOLqyr1tMw" source="_NA-jkHCKEeulIOLqyr1tMw"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_jSqc8HCKEeulIOLqyr1tMw" target="_jTTWIHCKEeulIOLqyr1tMw" source="_jTSIAHCKEeulIOLqyr1tMw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_jTZcwHCKEeulIOLqyr1tMw" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jTZcwXCKEeulIOLqyr1tMw" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_aTUOcJVMEeuwnP5WZnR-yw" target="_WO590JVMEeuwnP5WZnR-yw" source="_SyStAJVMEeuwnP5WZnR-yw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ivX0wJVMEeuwnP5WZnR-yw" target="_b9lX4JVMEeuwnP5WZnR-yw" source="_WO590JVMEeuwnP5WZnR-yw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_Su8RMF6dEeuFDrF0a_XgfQ" name="Start"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_xiBi0HCDEeulIOLqyr1tMw" name="Request Product"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_ToQrgHCIEeulIOLqyr1tMw" name="Start"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_NA-jkHCKEeulIOLqyr1tMw" name="Start" outgoing="_WLkD0HCKEeulIOLqyr1tMw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_OaIH0HCKEeulIOLqyr1tMw" name="Request Product" incoming="_WLkD0HCKEeulIOLqyr1tMw">
+      <outputValue xmi:type="uml:OutputPin" xmi:id="_jTSIAHCKEeulIOLqyr1tMw" name="P.O" outgoing="_jSqc8HCKEeulIOLqyr1tMw">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_jTSvEHCKEeulIOLqyr1tMw" value="1"/>
+      </outputValue>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_e23AAHCKEeulIOLqyr1tMw" name="Process Order">
+      <inputValue xmi:type="uml:InputPin" xmi:id="_jTTWIHCKEeulIOLqyr1tMw" name="P.O" incoming="_jSqc8HCKEeulIOLqyr1tMw">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_jTT9MHCKEeulIOLqyr1tMw" value="1"/>
+      </inputValue>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_qCVZ8HCKEeulIOLqyr1tMw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_SyStAJVMEeuwnP5WZnR-yw" name="Start" outgoing="_aTUOcJVMEeuwnP5WZnR-yw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_WO590JVMEeuwnP5WZnR-yw" name="Login" incoming="_aTUOcJVMEeuwnP5WZnR-yw" outgoing="_ivX0wJVMEeuwnP5WZnR-yw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_b9lX4JVMEeuwnP5WZnR-yw" name="End" incoming="_ivX0wJVMEeuwnP5WZnR-yw"/>
+  </packagedElement>
+</uml:Model>

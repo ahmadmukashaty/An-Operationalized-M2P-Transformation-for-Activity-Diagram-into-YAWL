@@ -1,0 +1,43 @@
+
+My Model Name is Sample2
+Free Text
+
+
+
+	
+	Nodes Are:
+	
+		Node Name : Test
+		Node Type : OpaqueAction
+		OutGoing : end
+		InComing : Test
+		
+
+	
+		Node Name : end
+		Node Type : ActivityFinalNode
+		OutGoing : 
+		InComing : end
+		
+
+	
+		Node Name : Start
+		Node Type : InitialNode
+		OutGoing : Test
+		InComing : 
+		
+
+	Edges Are:
+		has
+		ControlFlow
+		Test
+		Start
+
+		to
+		ControlFlow
+		end
+		Test
+
+
+	
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ID96kJV3EeuwnP5WZnR-yw" name="Sample">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_IILsMJV3EeuwnP5WZnR-yw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_IF1i0JV3EeuwnP5WZnR-yw" name="Activity1" node="_JkerEJV3EeuwnP5WZnR-yw _OFms4JV3EeuwnP5WZnR-yw _UiArALDTEeuNIciMDzWHRw _hGHEwLDTEeuNIciMDzWHRw _KRH0kLDUEeuNIciMDzWHRw _duqLULDUEeuNIciMDzWHRw _9ZUmQLDUEeuNIciMDzWHRw _AkpSwLDVEeuNIciMDzWHRw _UiG00LDXEeuNIciMDzWHRw _rIt_4LDYEeuNIciMDzWHRw _55wLQLDYEeuNIciMDzWHRw _BewNwLDZEeuNIciMDzWHRw">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FR9L4LDUEeuNIciMDzWHRw" target="_hGHEwLDTEeuNIciMDzWHRw" source="_UiArALDTEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WZU8gLDUEeuNIciMDzWHRw" target="_UiArALDTEeuNIciMDzWHRw" source="_JkerEJV3EeuwnP5WZnR-yw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_oFCJQLDUEeuNIciMDzWHRw" target="_KRH0kLDUEeuNIciMDzWHRw" source="_hGHEwLDTEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_pM5JMLDUEeuNIciMDzWHRw" target="_duqLULDUEeuNIciMDzWHRw" source="_hGHEwLDTEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Di2JQLDVEeuNIciMDzWHRw" target="_AkpSwLDVEeuNIciMDzWHRw" source="_KRH0kLDUEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ahUlQLDXEeuNIciMDzWHRw" name="rush order" target="_9ZUmQLDUEeuNIciMDzWHRw" source="_AkpSwLDVEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gWu5cLDXEeuNIciMDzWHRw" name="normal order" target="_UiG00LDXEeuNIciMDzWHRw" source="_AkpSwLDVEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_waIPILDYEeuNIciMDzWHRw" target="_rIt_4LDYEeuNIciMDzWHRw" source="_9ZUmQLDUEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_z9Q-sLDYEeuNIciMDzWHRw" target="_rIt_4LDYEeuNIciMDzWHRw" source="_UiG00LDXEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_83STYLDYEeuNIciMDzWHRw" target="_55wLQLDYEeuNIciMDzWHRw" source="_duqLULDUEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_J2UVoLDZEeuNIciMDzWHRw" target="_OFms4JV3EeuwnP5WZnR-yw" source="_BewNwLDZEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_L1yTALDZEeuNIciMDzWHRw" target="_BewNwLDZEeuNIciMDzWHRw" source="_rIt_4LDYEeuNIciMDzWHRw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Nn4iwLDZEeuNIciMDzWHRw" target="_BewNwLDZEeuNIciMDzWHRw" source="_55wLQLDYEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_JkerEJV3EeuwnP5WZnR-yw" name="Start" outgoing="_WZU8gLDUEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_OFms4JV3EeuwnP5WZnR-yw" name="End" incoming="_J2UVoLDZEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_UiArALDTEeuNIciMDzWHRw" name="Recieve Order" incoming="_WZU8gLDUEeuNIciMDzWHRw" outgoing="_FR9L4LDUEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:ForkNode" xmi:id="_hGHEwLDTEeuNIciMDzWHRw" name="f1" incoming="_FR9L4LDUEeuNIciMDzWHRw" outgoing="_oFCJQLDUEeuNIciMDzWHRw _pM5JMLDUEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_KRH0kLDUEeuNIciMDzWHRw" name="Fill Order" incoming="_oFCJQLDUEeuNIciMDzWHRw" outgoing="_Di2JQLDVEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_duqLULDUEeuNIciMDzWHRw" name="Send Invoice" incoming="_pM5JMLDUEeuNIciMDzWHRw" outgoing="_83STYLDYEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9ZUmQLDUEeuNIciMDzWHRw" name="Arrange Overnight Delivery" incoming="_ahUlQLDXEeuNIciMDzWHRw" outgoing="_waIPILDYEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_AkpSwLDVEeuNIciMDzWHRw" name="d1" incoming="_Di2JQLDVEeuNIciMDzWHRw" outgoing="_ahUlQLDXEeuNIciMDzWHRw _gWu5cLDXEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_UiG00LDXEeuNIciMDzWHRw" name="Arrange Regular Delivery" incoming="_gWu5cLDXEeuNIciMDzWHRw" outgoing="_z9Q-sLDYEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_rIt_4LDYEeuNIciMDzWHRw" name="m1" incoming="_waIPILDYEeuNIciMDzWHRw _z9Q-sLDYEeuNIciMDzWHRw" outgoing="_L1yTALDZEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_55wLQLDYEeuNIciMDzWHRw" name="Receive Payment" incoming="_83STYLDYEeuNIciMDzWHRw" outgoing="_Nn4iwLDZEeuNIciMDzWHRw"/>
+    <node xmi:type="uml:JoinNode" xmi:id="_BewNwLDZEeuNIciMDzWHRw" name="j1" incoming="_L1yTALDZEeuNIciMDzWHRw _Nn4iwLDZEeuNIciMDzWHRw" outgoing="_J2UVoLDZEeuNIciMDzWHRw"/>
+  </packagedElement>
+</uml:Model>

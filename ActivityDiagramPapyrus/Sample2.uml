@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_0Vj_kLXeEeuTJ__O08538g" name="Sample2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_0fAPcLXeEeuTJ__O08538g">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_0YSjcLXeEeuTJ__O08538g" name="Activity1" node="_17YG0LXeEeuTJ__O08538g _4f4q8LXeEeuTJ__O08538g _8QE_ELXeEeuTJ__O08538g">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6WkfwLXeEeuTJ__O08538g" name="has" target="_4f4q8LXeEeuTJ__O08538g" source="_17YG0LXeEeuTJ__O08538g"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_-56vILXeEeuTJ__O08538g" name="to" target="_8QE_ELXeEeuTJ__O08538g" source="_4f4q8LXeEeuTJ__O08538g"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_17YG0LXeEeuTJ__O08538g" name="Start" outgoing="_6WkfwLXeEeuTJ__O08538g"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_4f4q8LXeEeuTJ__O08538g" name="Test" incoming="_6WkfwLXeEeuTJ__O08538g" outgoing="_-56vILXeEeuTJ__O08538g"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_8QE_ELXeEeuTJ__O08538g" name="end" incoming="_-56vILXeEeuTJ__O08538g"/>
+  </packagedElement>
+</uml:Model>

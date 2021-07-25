@@ -1,0 +1,31 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+
+[template public generateElement(aModel : Model)]
+[comment @main/]
+[file (aModel.name, false, 'UTF-8')]
+
+My Model Name is [aModel.name/]
+Free Text
+
+[for (a:Activity | aModel.eContents(Activity))]
+	
+	Nodes Are:
+	[for (no:ActivityNode | a.node)]
+	
+		[no.name/]
+
+	[/for]
+	Edges Are:
+	[for (ed:ActivityEdge | a.edge)]
+	
+		[ed.name/]
+
+	[/for]
+
+	
+[/for]
+
+[/file]
+[/template]

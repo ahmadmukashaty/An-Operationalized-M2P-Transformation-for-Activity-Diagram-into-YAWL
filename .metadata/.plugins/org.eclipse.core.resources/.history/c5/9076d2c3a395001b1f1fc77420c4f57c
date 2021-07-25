@@ -1,0 +1,6 @@
+package TransformationTest.model;
+
+public class Edge {
+	public String sourceNode;
+	public String targetNode;
+}

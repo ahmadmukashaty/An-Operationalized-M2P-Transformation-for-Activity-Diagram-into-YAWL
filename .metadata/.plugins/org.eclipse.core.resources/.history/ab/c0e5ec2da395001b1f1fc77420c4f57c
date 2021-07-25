@@ -1,0 +1,49 @@
+package TransformationTest.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Node {
+	public String name;
+	public String type;
+	public List<String> inComing;
+	public List<String> outGoing;	
+	
+	public Node() {
+		this.inComing = new ArrayList<String>();
+		this.outGoing = new ArrayList<String>();
+	}
+}
+
+
+public class Activity {
+	public String name;
+	public ArrayList<Node> nodes;
+	public ArrayList<Edge> edges;
+
+	public Activity(){
+		this.name = "Sample";
+		this.nodes = new ArrayList<Node>();
+		this.edges = new ArrayList<Edge>();
+	
+	//filling the model with UML Datas
+		Node Start = new Node();
+		Start.name = "Start";
+		Start.type = "InitialNode";
+		Start.inComing.add("");
+		Start.outGoing.push("Login");
+		this.nodes.push(Start);
+		Node End = new Node();
+		End.name = "End";
+		End.type = "ActivityFinalNode";
+		End.inComing.push("End");
+		End.outGoing.push("");
+		this.nodes.push(End);
+		Node Login = new Node();
+		Login.name = "Login";
+		Login.type = "OpaqueAction";
+		Login.inComing.push("Login");
+		Login.outGoing.push("End");
+		this.nodes.push(Login);
+	}
+}

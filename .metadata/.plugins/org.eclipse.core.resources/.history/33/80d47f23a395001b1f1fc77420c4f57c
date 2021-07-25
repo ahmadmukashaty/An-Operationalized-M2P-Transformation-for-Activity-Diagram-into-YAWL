@@ -1,0 +1,16 @@
+package TransformationTest.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Node {
+	public String name;
+	public String type;
+	public List<String> inComing;
+	public List<String> outGoing;	
+	
+	public Node() {
+		this.inComing = new ArrayList<String>();
+		this.outGoing = new ArrayList<String>();
+	}
+}

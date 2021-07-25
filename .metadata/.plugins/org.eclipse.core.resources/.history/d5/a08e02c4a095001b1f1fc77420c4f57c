@@ -1,0 +1,15 @@
+/* Generated Class From UML AD */
+
+public class Activity {
+	public String name;
+	public List<Node> nodes;
+	public List<Edge> edges;
+
+	public Activity(){
+		this.name = Sample;
+		this.nodes = new List<Node>();
+		this.edges = new List<Edge>();
+	}
+}
+
+

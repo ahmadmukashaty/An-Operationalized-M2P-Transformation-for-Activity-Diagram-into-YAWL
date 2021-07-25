@@ -1,0 +1,37 @@
+/* Generated Class From UML AD */
+import java.util.ArrayList;
+import java.util.List;
+
+public class Activity {
+	public String name;
+	public List<Node> nodes;
+	public List<Edge> edges;
+
+	public Activity(){
+		this.name = "Sample";
+		this.nodes = new ArrayList<Node>();
+		this.edges = new ArrayList<Edge>();
+	
+	//filling the model with UML Datas
+		Node Start = new Node();
+		Start.name = "Start";
+		Start.type = "InitialNode";
+		Start.inComing.push("");
+		Start.outGoing.push("Login");
+		this.nodes.push(Start);
+		Node End = new Node();
+		End.name = "End";
+		End.type = "ActivityFinalNode";
+		End.inComing.push("End");
+		End.outGoing.push("");
+		this.nodes.push(End);
+		Node Login = new Node();
+		Login.name = "Login";
+		Login.type = "OpaqueAction";
+		Login.inComing.push("Login");
+		Login.outGoing.push("End");
+		this.nodes.push(Login);
+	}
+}
+
+

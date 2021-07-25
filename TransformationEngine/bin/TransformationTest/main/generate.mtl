@@ -1,0 +1,107 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+
+[template public generateElement(aModel : Model)]
+[comment @main/]
+[file (aModel.name, false, 'UTF-8')]
+
+My Model Name is [aModel.name/]
+Free Text
+
+[generateClassDeclaration(aModel)/]
+
+[for (a:Activity | aModel.eContents(Activity))]
+	
+	Nodes Are:
+	[for (no:ActivityNode | a.node)]
+	
+		Node Name : [no.name/]
+		[comment no.getLabel() /]
+		Node Type : [no.eClass().name/]
+		OutGoing : [no.outgoing.target.name/]
+		InComing : [no.incoming.target.name/]
+		
+
+	[/for]
+	Edges Are:
+	[for (ed:ActivityEdge | a.edge)]
+		[ed.name/]
+		[ed.eClass().name/]
+		[ed.target.name/]
+		[ed.source.name/]
+
+	[/for]
+
+	
+[/for]
+
+[/file]
+[/template]
+
+
+
+[template public generateClassDeclaration(aModel : Model)]
+[file ('Activity.java', false, 'UTF-8')]
+package TransformationTest.model;
+/* Generated Class From UML AD */
+import java.util.ArrayList;
+import java.util.List;
+
+public class Activity {
+	public String name;
+	public List<Node> nodes;
+	public List<Edge> edges;
+
+	public Activity(){
+		this.name = "[aModel.name/]";
+		this.nodes = new ArrayList<Node>();
+		this.edges = new ArrayList<Edge>();
+	
+		//filling the model with UML Data
+	[for (a:Activity | aModel.eContents(Activity))]
+	[for (no:ActivityNode | a.node)]
+		Node node[i/] = new Node();
+		node[i/].name = "[no.name/]";
+		node[i/].type = NodeType.[no.eClass().name/];
+		this.nodes.add(node[i/]);
+	[/for]
+	
+	[for (ed:ActivityEdge | a.edge)]
+		Edge edge[i/] = new Edge();
+		edge[i/].sourceNode = "[ed.source.name/]";
+		edge[i/].targetNode = "[ed.target.name/]";
+		edge[i/].type = "[ed.eClass().name/]";
+		edge[i/].name = "[ed.name/]";
+		this.edges.add(edge[i/]);
+	[/for]
+	[/for]
+		addIncomingOutgoingEdges();
+	}
+
+	private void addIncomingOutgoingEdges() {
+		for(Edge edge : edges) {
+			Node source = getNodeByName(edge.sourceNode);
+			Node dest = getNodeByName(edge.targetNode);
+			
+			dest.inComing.add(source);
+			source.outGoing.add(dest);
+		}
+	}
+	
+	private Node getNodeByName(String nodeName) {
+		for(Node node: nodes) {
+			if(node.name == nodeName) {
+				return node;
+			}
+		}
+		return null;
+	}
+}
+
+
+[/file]
+[/template]
+
+
+

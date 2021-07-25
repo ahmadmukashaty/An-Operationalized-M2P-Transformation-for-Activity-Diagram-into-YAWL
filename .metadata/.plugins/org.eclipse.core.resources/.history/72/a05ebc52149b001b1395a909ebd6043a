@@ -1,0 +1,13 @@
+package TransformationTest.yawl;
+
+
+import org.jdom2.*;
+
+public class GenerateYawl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

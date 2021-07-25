@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.jdom2.Element"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.Activity"/>
+    <fullyQualifiedTypeName name="TransformationTest.yawl.NodeGenerator"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.serialize.XMLSerializer"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.serialize.OutputFormat"/>
+    <fullyQualifiedTypeName name="org.jdom2.output.Format"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.Yawl"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.YNode"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.Edge"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.YGate"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.Node"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.NodeType"/>
+    <fullyQualifiedTypeName name="TransformationTest.model.YNodeType"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="TransformationTest.yawl.ActivityManagement"/>
+    <fullyQualifiedTypeName name="TransformationTest.yawl.YawlManagement"/>
+</qualifiedTypeNameHistroy>

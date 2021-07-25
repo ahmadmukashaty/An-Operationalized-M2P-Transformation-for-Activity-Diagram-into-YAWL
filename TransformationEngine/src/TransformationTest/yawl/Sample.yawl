@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specificationSet xmlns="http://www.yawlfoundation.org/yawlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="http://www.yawlfoundation.org/yawlschema http://www.yawlfoundation.org/yawlschema/YAWL_Schema4.0.xsd">
+  <specification uri="Test">
+    <documentation>No description provided</documentation>
+    <metaData>
+      <creator>Ahmad Mukashaty</creator>
+      <description>No description provided</description>
+      <coverage>4.3.1.772</coverage>
+      <version>0.1</version>
+      <persistent>false</persistent>
+      <identifier>UID_531fa076-f073-42cd-b005-c60b88b5408f</identifier>
+    </metaData>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" />
+    <decomposition id="Net" isRootNet="true" xsi:type="NetFactsType">
+      <processControlElements>
+        <inputCondition id="InputCondition">
+          <flowsInto>
+            <nextElementRef id="Recieve Order" />
+          </flowsInto>
+        </inputCondition>
+        <task id="Recieve Order">
+          <name>Recieve Order</name>
+          <flowsInto>
+            <nextElementRef id="Send Invoice" />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Fill Order" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="and" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="Send Invoice">
+          <name>Send Invoice</name>
+          <flowsInto>
+            <nextElementRef id="Receive Payment" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="Fill Order">
+          <name>Fill Order</name>
+          <flowsInto>
+            <nextElementRef id="Arrange Regular Delivery" />
+          </flowsInto>
+          <flowsInto>
+            <nextElementRef id="Arrange Overnight Delivery" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="Receive Payment">
+          <name>Receive Payment</name>
+          <flowsInto>
+            <nextElementRef id="j1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="Arrange Regular Delivery">
+          <name>Arrange Regular Delivery</name>
+          <flowsInto>
+            <nextElementRef id="m1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="Arrange Overnight Delivery">
+          <name>Arrange Overnight Delivery</name>
+          <flowsInto>
+            <nextElementRef id="m1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="j1">
+          <name />
+          <flowsInto>
+            <nextElementRef id="OutputCondition" />
+          </flowsInto>
+          <join code="and" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <task id="m1">
+          <name />
+          <flowsInto>
+            <nextElementRef id="j1" />
+          </flowsInto>
+          <join code="xor" />
+          <split code="xor" />
+          <resourcing>
+            <offer initiator="user" />
+            <allocate initiator="user" />
+            <start initiator="user" />
+          </resourcing>
+        </task>
+        <outputCondition id="OutputCondition" />
+      </processControlElements>
+    </decomposition>
+  </specification>
+  <layout xmlns="">
+    <locale language="en" country="US" />
+    <specification id="Test">
+      <size w="58" h="28" />
+      <net id="Net">
+        <bounds x="0" y="0" w="1126" h="447" />
+        <frame x="0" y="0" w="1129" h="450" />
+        <viewport x="0" y="0" w="1129" h="450" />
+        <scale>1.5</scale>
+        <container id="Arrange Regular Delivery">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <container id="Arrange Overnight Delivery">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <container id="Recieve Order">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <container id="m1">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <container id="j1">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <vertex id="InputCondition">
+          <attributes>
+            <bounds x="44" y="104" w="32" h="32" />
+          </attributes>
+        </vertex>
+        <container id="Fill Order">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <vertex id="OutputCondition">
+          <attributes>
+            <bounds x="44" y="104" w="32" h="32" />
+          </attributes>
+        </vertex>
+        <container id="f1">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <container id="Send Invoice">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <container id="Receive Payment">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <container id="d1">
+          <vertex>
+            <attributes>
+              <bounds x="44" y="104" w="32" h="32" />
+            </attributes>
+          </vertex>
+          <label>
+            <attributes>
+              <bounds x="44" y="104" w="97" h="17" />
+            </attributes>
+          </label>
+        </container>
+        <flow source="Fill Order" target="d1">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Arrange Overnight Delivery" target="m1">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="j1" target="OutputCondition">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Receive Payment" target="j1">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="m1" target="j1">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="d1" target="Arrange Regular Delivery">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="d1" target="Arrange Overnight Delivery">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Recieve Order" target="f1">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Arrange Regular Delivery" target="m1">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="f1" target="Fill Order">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="InputCondition" target="Recieve Order">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="f1" target="Send Invoice">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+        <flow source="Send Invoice" target="Receive Payment">
+          <ports in="13" out="12" />
+          <attributes>
+            <lineStyle>11</lineStyle>
+          </attributes>
+        </flow>
+      </net>
+    </specification>
+  </layout>
+</specificationSet>

@@ -1,0 +1,26 @@
+package TransformationTest.yawl;
+
+
+import org.jdom2.*;
+
+public class GenerateYawl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private static void readMetaData() {
+		
+	}
+	
+	private static void writeYawlformat() {
+		Document document = new Document();
+		Element root = new Element("Document");
+		root.setAttribute("title","yawl.xml");
+		root.addContent(new Element("child"));
+		document.setRootElement(root);
+		
+	}
+
+}

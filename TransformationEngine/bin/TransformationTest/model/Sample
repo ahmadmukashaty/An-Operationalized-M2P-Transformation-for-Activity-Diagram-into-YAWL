@@ -1,0 +1,161 @@
+
+My Model Name is Sample
+Free Text
+
+
+
+	
+	Nodes Are:
+	
+		Node Name : Arrange Regular Delivery
+		Node Type : OpaqueAction
+		OutGoing : m1
+		InComing : Arrange Regular Delivery
+		
+
+	
+		Node Name : Arrange Overnight Delivery
+		Node Type : OpaqueAction
+		OutGoing : m1
+		InComing : Arrange Overnight Delivery
+		
+
+	
+		Node Name : Recieve Order
+		Node Type : OpaqueAction
+		OutGoing : f1
+		InComing : Recieve Order
+		
+
+	
+		Node Name : m1
+		Node Type : MergeNode
+		OutGoing : j1
+		InComing : m1m1
+		
+
+	
+		Node Name : j1
+		Node Type : JoinNode
+		OutGoing : End
+		InComing : j1j1
+		
+
+	
+		Node Name : Start
+		Node Type : InitialNode
+		OutGoing : Recieve Order
+		InComing : 
+		
+
+	
+		Node Name : Fill Order
+		Node Type : OpaqueAction
+		OutGoing : d1
+		InComing : Fill Order
+		
+
+	
+		Node Name : End
+		Node Type : ActivityFinalNode
+		OutGoing : 
+		InComing : End
+		
+
+	
+		Node Name : f1
+		Node Type : ForkNode
+		OutGoing : Fill OrderSend Invoice
+		InComing : f1
+		
+
+	
+		Node Name : Send Invoice
+		Node Type : OpaqueAction
+		OutGoing : Receive Payment
+		InComing : Send Invoice
+		
+
+	
+		Node Name : Receive Payment
+		Node Type : OpaqueAction
+		OutGoing : j1
+		InComing : Receive Payment
+		
+
+	
+		Node Name : d1
+		Node Type : DecisionNode
+		OutGoing : Arrange Overnight DeliveryArrange Regular Delivery
+		InComing : d1
+		
+
+	Edges Are:
+		
+		ControlFlow
+		d1
+		Fill Order
+
+		
+		ControlFlow
+		m1
+		Arrange Overnight Delivery
+
+		
+		ControlFlow
+		End
+		j1
+
+		
+		ControlFlow
+		j1
+		Receive Payment
+
+		
+		ControlFlow
+		j1
+		m1
+
+		normal order
+		ControlFlow
+		Arrange Regular Delivery
+		d1
+
+		rush order
+		ControlFlow
+		Arrange Overnight Delivery
+		d1
+
+		
+		ControlFlow
+		f1
+		Recieve Order
+
+		
+		ControlFlow
+		m1
+		Arrange Regular Delivery
+
+		
+		ControlFlow
+		Fill Order
+		f1
+
+		
+		ControlFlow
+		Recieve Order
+		Start
+
+		
+		ControlFlow
+		Send Invoice
+		f1
+
+		
+		ControlFlow
+		Receive Payment
+		Send Invoice
+
+
+	
+

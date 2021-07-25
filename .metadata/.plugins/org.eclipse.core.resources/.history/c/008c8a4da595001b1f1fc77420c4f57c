@@ -1,0 +1,50 @@
+package TransformationTest.model;
+/* Generated Class From UML AD */
+import java.util.ArrayList;
+import java.util.List;
+
+public class Activity {
+	public String name;
+	public List<Node> nodes;
+	public List<Edge> edges;
+
+	public Activity(){
+		this.name = "Sample";
+		this.nodes = new ArrayList<Node>();
+		this.edges = new ArrayList<Edge>();
+	
+		//filling the model with UML Datas
+		Node node1 = new Node();
+		node1.name = "End";
+		node1.type = "ActivityFinalNode";
+		node1.inComing.add("End");
+		node1.outGoing.add("");
+		this.nodes.add(node1);
+		Node node2 = new Node();
+		node2.name = "Start";
+		node2.type = "InitialNode";
+		node2.inComing.add("");
+		node2.outGoing.add("Login");
+		this.nodes.add(node2);
+		Node node3 = new Node();
+		node3.name = "Login";
+		node3.type = "OpaqueAction";
+		node3.inComing.add("Login");
+		node3.outGoing.add("End");
+		this.nodes.add(node3);
+	
+		Edge edge1 = new Edge();
+		edge1.sourceNode = "Login";
+		edge1.targetNode = "End";
+		edge1.type = "ControlFlow";
+		Edge edge2 = new Edge();
+		edge2.sourceNode = "Start";
+		edge2.targetNode = "Login";
+		edge2.type = "ControlFlow";
+
+
+
+	}
+}
+
+
