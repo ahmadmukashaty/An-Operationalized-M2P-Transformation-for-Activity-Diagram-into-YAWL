@@ -1,0 +1,1 @@
+# An-Operationalized-M2P-Transformation-for-Activity-Diagram-into-YAWL
