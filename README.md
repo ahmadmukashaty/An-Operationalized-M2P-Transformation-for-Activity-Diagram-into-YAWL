@@ -3,5 +3,5 @@ Transformation from UML activity diagram to a formal workflow language YAWL (Yet
 
 
 <div style="text-align: center">
-    <img src="https://github.com/ahmadmukashaty/An-Operationalized-M2P-Transformation-for-Activity-Diagram-into-YAWL/blob/main/images/ArchitecureOverview.jpg" data-canonical-src="https://github.com/ahmadmukashaty/An-Operationalized-M2P-Transformation-for-Activity-Diagram-into-YAWL/blob/main/images/ArchitecureOverview.jpg" width="600" height="350"/>
+    <img src="https://github.com/ahmadmukashaty/An-Operationalized-M2P-Transformation-for-Activity-Diagram-into-YAWL/blob/main/images/ArchitecureOverview.jpg" width="600" height="350"/>
 </div>
